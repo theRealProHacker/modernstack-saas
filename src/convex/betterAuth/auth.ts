@@ -1,5 +1,5 @@
-import { createAuth } from '../auth';
-import { getStaticAuth } from '@convex-dev/better-auth';
+import { betterAuth } from 'better-auth';
+import { createAuthOptions } from '../auth';
 
-// Export a static instance for Better Auth schema generation
-export const auth = getStaticAuth(createAuth);
+// Static instance for CLI schema generation — no Convex ctx needed
+export const auth = betterAuth(createAuthOptions());
